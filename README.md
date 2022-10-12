@@ -59,9 +59,9 @@ jobs:
         uses: cypress-io/github-action@v4
 ```
 
-[![Basic example](https://github.com/cypress-io/github-action/workflows/example-basic/badge.svg?branch=master)](.github/workflows/example-basic.yml)
+[![Basic example](https://github.com/cypress-io/github-action/workflows/example-basic/badge.svg?branch=master)](.github/workflows_bak/example-basic.yml)
 
-The workflow file [.github/workflows/example-basic.yml](.github/workflows/example-basic.yml) shows how Cypress runs on GH Actions using Ubuntu (16, 18, or 20), on Windows, and on Mac without additional OS dependencies necessary.
+The workflow file [.github/workflows/example-basic.yml](.github/workflows_bak/example-basic.yml) shows how Cypress runs on GH Actions using Ubuntu (16, 18, or 20), on Windows, and on Mac without additional OS dependencies necessary.
 
 **Note:** this package assumes that `cypress` is declared as a development dependency in the `package.json` file. The `cypress` NPM module is required to run Cypress via its [NPM module API](https://on.cypress.io/module-api).
 
@@ -104,7 +104,7 @@ jobs:
           browser: chrome
 ```
 
-[![Chrome example](https://github.com/cypress-io/github-action/workflows/example-chrome/badge.svg?branch=master)](.github/workflows/example-chrome.yml)
+[![Chrome example](https://github.com/cypress-io/github-action/workflows/example-chrome/badge.svg?branch=master)](.github/workflows_bak/example-chrome.yml)
 
 ### Firefox
 
@@ -126,7 +126,7 @@ jobs:
           browser: firefox
 ```
 
-[![Firefox example](https://github.com/cypress-io/github-action/workflows/example-firefox/badge.svg?branch=master)](.github/workflows/example-firefox.yml)
+[![Firefox example](https://github.com/cypress-io/github-action/workflows/example-firefox/badge.svg?branch=master)](.github/workflows_bak/example-firefox.yml)
 
 **Note:** the magical user id `1001` works because it matches permissions settings on the home folder, see issue [#104](https://github.com/cypress-io/github-action/issues/104)
 
@@ -145,7 +145,7 @@ jobs:
           browser: edge
 ```
 
-[![Edge example](https://github.com/cypress-io/github-action/workflows/example-edge/badge.svg?branch=master)](.github/workflows/example-edge.yml)
+[![Edge example](https://github.com/cypress-io/github-action/workflows/example-edge/badge.svg?branch=master)](.github/workflows_bak/example-edge.yml)
 
 **Note:** Microsoft has not released Edge for Linux yet, thus you need to run these tests on Windows or Mac runners with Edge preinstalled. You can use [`cypress info`](https://on.cypress.io/command-line#cypress-info) command to see the browsers installed on the machine.
 
@@ -228,7 +228,7 @@ jobs:
 
 For more examples, see the workflow example below.
 
-[![Env example](https://github.com/cypress-io/github-action/workflows/example-env/badge.svg?branch=master)](.github/workflows/example-env.yml)
+[![Env example](https://github.com/cypress-io/github-action/workflows/example-env/badge.svg?branch=master)](.github/workflows_bak/example-env.yml)
 
 ### Specs
 
@@ -251,7 +251,7 @@ jobs:
           spec: cypress/integration/spec1.js
 ```
 
-You can pass multiple multiple specs and wild card patterns using multi-line parameter, see [example-config.yml](./.github/workflows/example-config.yml):
+You can pass multiple multiple specs and wild card patterns using multi-line parameter, see [example-config.yml](.github/workflows_bak/example-config.yml):
 
 ```yml
 spec: |
@@ -307,7 +307,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-[![recording example](https://github.com/cypress-io/github-action/workflows/example-recording/badge.svg?branch=master)](.github/workflows/example-recording.yml)
+[![recording example](https://github.com/cypress-io/github-action/workflows/example-recording/badge.svg?branch=master)](.github/workflows_bak/example-recording.yml)
 
 **Tip 1:** We recommend using the action with `on: [push]` instead of `on: [pull_request]` to get the most accurate information related to the commit on the dashboard. With pull requests, the merge commit is created automatically and might not correspond to a meaningful commit in the repository.
 
@@ -363,7 +363,7 @@ jobs:
           quiet: true
 ```
 
-[![example-quiet](https://github.com/cypress-io/github-action/workflows/example-quiet/badge.svg?branch=master)](.github/workflows/example-quiet.yml)
+[![example-quiet](https://github.com/cypress-io/github-action/workflows/example-quiet/badge.svg?branch=master)](.github/workflows_bak/example-quiet.yml)
 
 ### Tag recordings
 
@@ -460,7 +460,7 @@ jobs:
           config: pageLoadTimeout=100000,baseUrl=http://localhost:3000
 ```
 
-[![example-config](https://github.com/cypress-io/github-action/workflows/example-config/badge.svg?branch=master)](.github/workflows/example-config.yml)
+[![example-config](https://github.com/cypress-io/github-action/workflows/example-config/badge.svg?branch=master)](.github/workflows_bak/example-config.yml)
 
 ### Config File
 
@@ -550,7 +550,7 @@ You can run [Cypress component tests](https://on.cypress.io/component-testing) i
     component: true
 ```
 
-See the example project [component-test](/examples/v10/component-tests/) and the [example-component-test-workflow](.github/workflows/example-component-test.yml) for more details.
+See the example project [component-test](/examples/v10/component-tests/) and the [example-component-test-workflow](.github/workflows_bak/example-component-test.yml) for more details.
 
 ### Build app
 
@@ -610,7 +610,7 @@ jobs:
           start-windows: npm run start:windows:server
 ```
 
-[![start example](https://github.com/cypress-io/github-action/workflows/example-start/badge.svg?branch=master)](.github/workflows/example-start.yml)
+[![start example](https://github.com/cypress-io/github-action/workflows/example-start/badge.svg?branch=master)](.github/workflows_bak/example-start.yml)
 
 **Note:** GitHub cleans up the running server processes automatically. This action does not stop them.
 
@@ -642,7 +642,7 @@ with:
     npm run web
 ```
 
-[![start example](https://github.com/cypress-io/github-action/workflows/example-start/badge.svg?branch=master)](.github/workflows/example-start.yml)
+[![start example](https://github.com/cypress-io/github-action/workflows/example-start/badge.svg?branch=master)](.github/workflows_bak/example-start.yml)
 
 ### Wait-on
 
@@ -665,7 +665,7 @@ jobs:
           wait-on: 'http://localhost:8080'
 ```
 
-[![wait-on example](https://github.com/cypress-io/github-action/workflows/example-wait-on/badge.svg?branch=master)](.github/workflows/example-wait-on.yml)
+[![wait-on example](https://github.com/cypress-io/github-action/workflows/example-wait-on/badge.svg?branch=master)](.github/workflows_bak/example-wait-on.yml)
 
 By default, `wait-on` will retry for 60 seconds. You can pass a custom timeout in seconds using `wait-on-timeout`.
 
@@ -678,7 +678,7 @@ By default, `wait-on` will retry for 60 seconds. You can pass a custom timeout i
     wait-on-timeout: 120
 ```
 
-See also [![Webpack Dev Server example](https://github.com/cypress-io/github-action/workflows/example-webpack/badge.svg?branch=master)](.github/workflows/example-webpack.yml)
+See also [![Webpack Dev Server example](https://github.com/cypress-io/github-action/workflows/example-webpack/badge.svg?branch=master)](.github/workflows_bak/example-webpack.yml)
 
 You can wait for multiple URLs to respond by separating urls with a comma
 
@@ -703,7 +703,7 @@ You can even use your own command (usually by using `npm`, `yarn`, `npx`) to wai
     wait-on: 'npx wait-on --timeout 5000 http://localhost:3000'
 ```
 
-See [example-wait-on.yml](.github/workflows/example-wait-on.yml) workflow file.
+See [example-wait-on.yml](.github/workflows_bak/example-wait-on.yml) workflow file.
 
 If this action times out waiting for the server to respond, please see [Debugging](#debugging) section in this README file.
 
@@ -717,7 +717,7 @@ If you want to overwrite the install command
     install-command: yarn --frozen-lockfile --silent
 ```
 
-See [example-install-command.yml](.github/workflows/example-install-command.yml) workflow file.
+See [example-install-command.yml](.github/workflows_bak/example-install-command.yml) workflow file.
 
 ### Command prefix
 
@@ -760,7 +760,7 @@ steps:
       command: npm run e2e:ci
 ```
 
-See [.github/workflows/example-custom-command.yml](.github/workflows/example-custom-command.yml) file.
+See [.github/workflows/example-custom-command.yml](.github/workflows_bak/example-custom-command.yml) file.
 
 ### Custom build id
 
@@ -794,7 +794,7 @@ jobs:
 
 ### Robust custom build id
 
-If you re-run the GitHub workflow, if you use the same custom build id during recording, the Dashboard will cancel the run with "Build already finished" error. To avoid this, you need to generate a _new_ custom build id on every workflow re-run. A good solution showing in the [example-custom-ci-build-id.yml](./.github/workflows/example-custom-ci-build-id.yml) file is to run a common job first that just generates a new random ID. This ID can be used by the testing jobs to tie the build together. If the user re-runs the workflow a new unique build id is generated, allowing recording the new Dashboard run.
+If you re-run the GitHub workflow, if you use the same custom build id during recording, the Dashboard will cancel the run with "Build already finished" error. To avoid this, you need to generate a _new_ custom build id on every workflow re-run. A good solution showing in the [example-custom-ci-build-id.yml](.github/workflows_bak/example-custom-ci-build-id.yml) file is to run a common job first that just generates a new random ID. This ID can be used by the testing jobs to tie the build together. If the user re-runs the workflow a new unique build id is generated, allowing recording the new Dashboard run.
 
 ```yml
 jobs:
@@ -823,7 +823,7 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.EXAMPLE_RECORDING_KEY }}
 ```
 
-See the [example-custom-ci-build-id.yml](./.github/workflows/example-custom-ci-build-id.yml) for the full workflow
+See the [example-custom-ci-build-id.yml](.github/workflows_bak/example-custom-ci-build-id.yml) for the full workflow
 
 ### Working directory
 
@@ -900,7 +900,7 @@ See [cypress-gh-action-subfolders](https://github.com/bahmutov/cypress-gh-action
 
 ### Yarn workspaces
 
-This action should discover Yarn workspace correctly. For example, see folder [examples/start-and-yarn-workspaces](examples/start-and-yarn-workspaces) and workflow file [example-start-and-yarn-workspaces.yml](.github/workflows/example-start-and-yarn-workspaces.yml)
+This action should discover Yarn workspace correctly. For example, see folder [examples/start-and-yarn-workspaces](examples/start-and-yarn-workspaces) and workflow file [example-start-and-yarn-workspaces.yml](.github/workflows_bak/example-start-and-yarn-workspaces.yml)
 
 ```yaml
 name: example-start-and-yarn-workspaces
@@ -921,7 +921,7 @@ jobs:
           wait-on: 'http://localhost:5000'
 ```
 
-[![Yarn workspaces example](https://github.com/cypress-io/github-action/workflows/example-start-and-yarn-workspaces/badge.svg?branch=master)](.github/workflows/example-start-and-yarn-workspaces.yml)
+[![Yarn workspaces example](https://github.com/cypress-io/github-action/workflows/example-start-and-yarn-workspaces/badge.svg?branch=master)](.github/workflows_bak/example-start-and-yarn-workspaces.yml)
 
 ### Custom cache key
 
@@ -980,7 +980,7 @@ jobs:
       - uses: cypress-io/github-action@v4
 ```
 
-[![Node versions example](https://github.com/cypress-io/github-action/workflows/example-node-versions/badge.svg?branch=master)](.github/workflows/example-node-versions.yml)
+[![Node versions example](https://github.com/cypress-io/github-action/workflows/example-node-versions/badge.svg?branch=master)](.github/workflows_bak/example-node-versions.yml)
 
 **Note:** because this action uses `npm ci` and `npx` commands, it requires at least Node 8.12 that includes the version of NPM with those commands.
 
@@ -1035,9 +1035,9 @@ If the project has many dependencies, but you want to install just Cypress you c
     install: false
 ```
 
-See [.github/workflows/example-install-only.yml](.github/workflows/example-install-only.yml) file.
+See [.github/workflows/example-install-only.yml](.github/workflows_bak/example-install-only.yml) file.
 
-[![Install only Cypress example](https://github.com/cypress-io/github-action/workflows/example-install-only/badge.svg?branch=master)](.github/workflows/example-install-only.yml)
+[![Install only Cypress example](https://github.com/cypress-io/github-action/workflows/example-install-only/badge.svg?branch=master)](.github/workflows_bak/example-install-only.yml)
 
 ### Timeouts
 
@@ -1104,7 +1104,7 @@ You can set the environment variable using GitHub UI interface, or in the workfl
     DEBUG: '@cypress/github-action'
 ```
 
-See the [example-debug.yml](./.github/workflows/example-debug.yml) workflow file.
+See the [example-debug.yml](.github/workflows_bak/example-debug.yml) workflow file.
 
 ### Logs from the test runner
 
@@ -1178,7 +1178,7 @@ This GH Action sets an output `dashboardUrl` if the run was recorded on [Cypress
     echo See results at ${{ steps.cypress.outputs.dashboardUrl }}
 ```
 
-[![recording example](https://github.com/cypress-io/github-action/workflows/example-recording/badge.svg?branch=master)](.github/workflows/example-recording.yml)
+[![recording example](https://github.com/cypress-io/github-action/workflows/example-recording/badge.svg?branch=master)](.github/workflows_bak/example-recording.yml)
 
 **Note:** every GH workflow step can have `outcome` and `conclusion` properties. See the documentation at [steps context](https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#steps-context) page. In particular, the `output` value can be `success`, `failure`, `cancelled`, or `skipped` which you can use the next steps that follow.
 
@@ -1267,9 +1267,9 @@ jobs:
         uses: cypress-io/github-action@v4
 ```
 
-See the [example-cron.yml](./.github/workflows/example-cron.yml) workflow.
+See the [example-cron.yml](.github/workflows_bak/example-cron.yml) workflow.
 
-[![cron example](https://github.com/cypress-io/github-action/workflows/example-cron/badge.svg?branch=master)](.github/workflows/example-cron.yml)
+[![cron example](https://github.com/cypress-io/github-action/workflows/example-cron/badge.svg?branch=master)](.github/workflows_bak/example-cron.yml)
 
 ## Migration guide
 
