@@ -2,7 +2,7 @@ name: example-recording
 on:
   push:
     branches:
-      - 'master'
+      - 'test-parallel'
   pull_request:
 jobs:
 
